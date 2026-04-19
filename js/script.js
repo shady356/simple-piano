@@ -155,6 +155,18 @@ $('#pianoContainer').delegate('.key','mousedown',function()
 {
 	var index = $('.key').index(this);
 	keys[index].releaseKey();
+})
+.delegate('.key','touchstart', function(e)
+{
+	e.preventDefault();
+	var index = $('.key').index(this);
+	keys[index].playKey();
+})
+.delegate('.key','touchend touchcancel', function(e)
+{
+	e.preventDefault();
+	var index = $('.key').index(this);
+	keys[index].releaseKey();
 });
 
 
