@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang= "en">
+<head>
+	<meta name="viewport" content="width = device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Simple Piano</title>
+
+	<!-- polyfill -->
+	<script src="libs/MIDI.js-master/inc/shim/Base64.js" type="text/javascript"></script>
+	<script src="libs/MIDI.js-master/inc/shim/Base64binary.js" type="text/javascript"></script>
+	<script src="libs/MIDI.js-master/inc/shim/WebAudioAPI.js" type="text/javascript"></script>
+	<!-- midi.js package -->
+	<script src="libs/MIDI.js-master/js/midi/audioDetect.js" type="text/javascript"></script>
+	<script src="libs/MIDI.js-master/js/midi/gm.js" type="text/javascript"></script>
+	<script src="libs/MIDI.js-master/js/midi/loader.js" type="text/javascript"></script>
+	<script src="libs/MIDI.js-master/js/midi/plugin.audiotag.js" type="text/javascript"></script>
+	<script src="libs/MIDI.js-master/js/midi/plugin.webaudio.js" type="text/javascript"></script>
+	<script src="libs/MIDI.js-master/js/midi/plugin.webmidi.js" type="text/javascript"></script>
+	<!-- utils -->
+	<script src="libs/MIDI.js-master/js/util/dom_request_xhr.js" type="text/javascript"></script>
+	<script src="libs/MIDI.js-master/js/util/dom_request_script.js" type="text/javascript"></script>
+
+	<!-- jQuery -->
+	<script type = "text/javascript" src = "js/jquery.js"></script>
+
+	<!-- Style -->
+	<link rel="stylesheet" href="css/main.css"/>
+
+	<!-- Font-Awesome -->
+	<link rel="stylesheet" href="css/font-awesome-4.3.0/css/font-awesome.min.css"/>
+
+	<!-- Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'/>
+
+	<!-- Javascript -->
+	<script type = "text/javascript" src = "js/midi/play.js"></script>
+	<script type = "text/javascript" src = "js/classes/key.js"></script>
+	<script type = "text/javascript" src = "js/script.js"></script>
+
+</head>
+<body>
+	<h1 style = "opacity: 0; position: absolute; top:0; left: 0;" >Simple Piano</h1>
+	<div id = "loadingState">
+		<div id = "loadingText">Loading...</div>
+		<img id = "logo" src = "img/simplePiano.png" alt = "logo">
+	</div>
+
+	<div id = "pianoContainer">
+		<!-- <div class="key natural" data-key = "C4"><span class = "keyName">C</span></div>
+		<div class="key sharp squeeze" data-key = "Cs4"></div>
+		<div class="key natural squeeze" data-key = "D4"><span class = "keyName">D</span></div>
+		<div class="key sharp squeeze" data-key = "Ds4"></div>
+		<div class="key natural squeeze" data-key = "E4"><span class = "keyName">E</span></div>
+		<div class="key natural" data-key = "F4"><span class = "keyName">F</span></div>
+		<div class="key sharp squeeze" data-key = "Fs4"></div>
+		<div class="key natural squeeze" data-key = "G4"><span class = "keyName">G</span></div>
+		<div class="key sharp squeeze" data-key = "Gs4"></div>
+		<div class="key natural squeeze" data-key = "A4"><span class = "keyName">A</span></div>
+		<div class="key sharp squeeze" data-key = "As4"></div>
+		<div class="key natural squeeze" data-key = "B4"><span class = "keyName">B</span></div>
+		<div class="key natural" data-key = "C5"><span class = "keyName">C</span></div>
+		<div class="key sharp squeeze" data-key = "Cs5"></div>
+		<div class="key natural squeeze" data-key = "D5"><span class = "keyName">D</span></div>
+		<div class="key sharp squeeze" data-key = "Ds5"></div>
+		<div class="key natural squeeze" data-key = "E5"><span class = "keyName">E</span></div>
+		<div class="key natural" data-key = "F5"><span class = "keyName">F</span></div>
+		<div class="key sharp squeeze" data-key = "Fs5"></div>
+		<div class="key natural squeeze" data-key = "G5"><span class = "keyName">G</span></div>
+		<div class="key sharp squeeze" data-key = "Gs5"></div>
+		<div class="key natural squeeze" data-key = "A5"><span class = "keyName">A</span></div>
+		<div class="key sharp squeeze" data-key = "As5"></div>
+		<div class="key natural squeeze" data-key = "B5"><span class = "keyName">B</span></div> -->
+	</div>
+</body>
+</html>
