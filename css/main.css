@@ -56,6 +56,44 @@ body
 
 /*---------------------------------------------------------------------------*/
 
+#tabBar
+{
+	position:		fixed;
+	top:			18px;
+	left:			50%;
+	transform:		translateX(-50%);
+	z-index:		9999;
+	display:		flex;
+	border-radius:	8px;
+	overflow:		hidden;
+	box-shadow:		0 2px 8px rgba(0,0,0,0.18);
+}
+
+.tab
+{
+	background-color:	#b5d48a;
+	color:				#3a5c1e;
+	border:				none;
+	padding:			9px 28px;
+	font-size:			88%;
+	font-family:		'Ubuntu', sans-serif;
+	cursor:				pointer;
+	letter-spacing:		0.4px;
+	transition:			background-color 0.15s, color 0.15s;
+	user-select:		none;
+	-webkit-user-select: none;
+}
+
+	.tab:hover { background-color: #9dc870; }
+
+	.tab.active
+	{
+		background-color:	#5d8f38;
+		color:				#fff;
+	}
+
+/*---------------------------------------------------------------------------*/
+
 #pianoContainer
 {
 	position: absolute;
@@ -73,16 +111,40 @@ body
 	touch-action: none;
 }
 
-	.noteName
+	.noteName,
+	.keyLabel
 	{
-		position: 	absolute;
-		font-family:arial;
-		left:				18px;
-		bottom:			20px;
-		font-size:	125%;
-		color:			#aaa;
-		user-select: none;
+		position:		absolute;
+		font-family:	arial;
+		left:			50%;
+		transform:		translateX(-50%);
+		bottom:			18px;
+		font-size:		90%;
+		user-select:	none;
 		-webkit-user-select: none;
+		white-space:	nowrap;
+		transition:		opacity 0.12s;
+	}
+
+	/* Notes tab (default): show noteName, hide keyLabel */
+	.noteName { color: #666; opacity: 1; }
+	.keyLabel  { color: #666; opacity: 0; }
+
+	/* Keyboard tab: swap visibility */
+	body.tab-keyboard .noteName { opacity: 0; }
+	body.tab-keyboard .keyLabel  { opacity: 1; }
+
+	/* Clean tab: hide all labels */
+	body.tab-clean .noteName { opacity: 0; }
+	body.tab-clean .keyLabel  { opacity: 0; }
+
+	/* Sharp keys: lighter text, tighter positioning */
+	.sharp .noteName,
+	.sharp .keyLabel
+	{
+		color:		#ccc;
+		font-size:	78%;
+		bottom:		10px;
 	}
 
 .natural

@@ -31,12 +31,18 @@ function initPosition()
 		$('#pianoContainer').css('left',0);
 }
 
+var keyboardLabels = ['Q','2','W','3','E','R','5','T','6','Y','7','U','C','F','V','G','B','N','J','M','K',',','L','.'];
+
 function initialize()
 {
 	for(var i = 0; i < keys.length; i++)
 	{
-		keys[i].renderHtml();					// Render Key in HTML.
+		keys[i].renderHtml();
 	}
+
+	$('.key').each(function(i) {
+		$(this).find('.keyLabel').text(keyboardLabels[i] || '');
+	});
 
 	initPosition();
 

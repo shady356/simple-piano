@@ -45,13 +45,13 @@
    this.renderHtml = function()
    {
      var htmlClass = "key " + this.noteType;
-     var htmlSpan = "";
+     var displayName = this.noteName.replace('s', '#') + this.octave;
 
      if(this.noteName != "C" && this.noteName != "F")
        htmlClass += " keySqueeze";
 
-     if(this.noteType == "natural")
-      htmlSpan = '<span class = "noteName">' + this.noteName + '</span>';
+     var htmlSpan = '<span class="noteName">' + displayName + '</span>' +
+                    '<span class="keyLabel"></span>';
 
      $('#pianoContainer').append(
        '<div class="' + htmlClass + '">' + htmlSpan + '</div>'
