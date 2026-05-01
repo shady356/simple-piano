@@ -13,7 +13,6 @@
 	margin:				0px;
 	list-style:			none;
 	text-decoration:	none;
-	font-family: 'Ubuntu', sans-serif;
 	-webkit-tap-highlight-color: transparent;
 	touch-action: manipulation;
 }
@@ -24,6 +23,7 @@ body
 {
 	width:	100%;
 	background-color: #CBE2AF ;
+	font-family: "Outfit", sans-serif;
 }
 
 #loadingState
@@ -43,7 +43,7 @@ body
 		font-size: 200%;
 		text-align: center;
 		margin-top: 10%;
-		color: #fff;
+		color: #1d3104;
 	}
 
 	#logo
@@ -76,9 +76,8 @@ body
 	border:				none;
 	padding:			9px 28px;
 	font-size:			88%;
-	font-family:		'Ubuntu', sans-serif;
+	font-weight:		600;
 	cursor:				pointer;
-	letter-spacing:		0.4px;
 	transition:			background-color 0.15s, color 0.15s;
 	user-select:		none;
 	-webkit-user-select: none;
